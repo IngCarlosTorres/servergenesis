@@ -8,7 +8,6 @@ export async function getReviews() {
     const queryText =
       "SELECT * FROM review";
     const data = await client.query(queryText);
-    console.log(data.rows)
     return data.rows;
   } catch (e) {
     throw e;
