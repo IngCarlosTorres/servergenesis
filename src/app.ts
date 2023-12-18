@@ -3,8 +3,10 @@ import express from 'express'
 import appointmentRouter from './routes/appointment'
 import reviewRouter from './routes/review'
 import serveless from 'serverless-http'
+import cors from 'cors';
 
 const app = express()
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({
     extended: false
